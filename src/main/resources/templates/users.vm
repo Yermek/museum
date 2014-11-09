@@ -1,0 +1,53 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>Buisiness project: internet shop</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-5">
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <!--[if IE]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+<audio src="God Is An astronaut - Shadows.mp3" controls></audio>
+<div id="header">
+    <a href="/" class="float"><img src="/images/logo.jpg" alt="" width="171" height="73" /></a>
+    <div class="topblock2">
+        </a><img src="/images/shopping.gif" alt="" width="24" height="24" class="shopping" />
+        <a href="/cartpage""><p>Shopping cart</p></a>
+    </div>
+    <ul id="menu">
+        <li><img src="/images/li.gif" alt="" width="19" height="29" /></li>
+        <li><a href="/"><img src="/images/but1_a.gif" alt="" width="90" height="29" /></a></li>
+        <li><a href="/"><img src="/images/but5.gif" alt="" width="132" height="29" /></a></li>
+        <li><a href="/"><img src="/images/but7.gif" alt="" width="82" height="29" /></a></li>
+        <li><a href="/"><img src="/images/but8.gif" alt="" width="112" height="29" /></a></li>
+    </ul>
+</div>
+
+<div id="container">
+    <div id="left" class="column">
+        <div class="block">
+            <img src="/images/title1.gif" alt="" width="168" height="42" /><br />
+            <ul id="navigation">
+                #foreach($group in $groups)
+                    <li class="color"><a href="/itemslist?idgroup=$group.id">$group.nameGroupItem</a></li>
+                #end
+            </ul>
+        </div>
+    </div>
+    <div id="center" class="column">
+        <div class="block">
+                #foreach($user in $users)
+                    <li class="color">$user.id   $user.nameUser</li>
+                #end
+        </div>
+    </div>
+</div>
+
+<div id="footer">
+    <p>Copyright &copy;. All rights reserved.</p>
+</div>
+</body>
+</html>

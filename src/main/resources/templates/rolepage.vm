@@ -1,0 +1,50 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>Buisiness project: internet shop</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-5">
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <!--[if IE]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+<div id="header">
+    <a href="/" class="float"><img src="/images/logo.jpg" alt="" width="171" height="73" /></a>
+</div>
+
+<div id="container">
+    <div id="center" class="column">
+		<div class="block">
+        #foreach($role in $roles)
+            <div><p class="line">№ $role.id   </div> | <div><p class="line"> Name of role:   $role.nameRole</p>/div>
+        #end
+		</div>
+		</br>
+		<h5>Create roles</h5>
+        <div class="blocks">
+            <form action="/createRole" method="get">
+                <p class="line"><span>Name of role:</span> <input type="text" name="namerole"/></p>
+                <p><input type="submit" name="Save"></p>
+            </form>
+        </div>
+    </div>
+    <div id="left" class="column">
+        <div class="block">
+            <img src="/images/title1.gif" alt="" width="168" height="42" /><br />
+            <ul id="navigation">
+                #foreach($group in $groups)
+                    <li class="color"><a href="/itemslist?idgroup=$group.id">$group.nameGroupItem</a></li>
+                #end
+            </ul>
+        </div>
+    </div>
+
+</div>
+
+<div id="footer">
+    <p>Copyright &copy;. All rights reserved.</p>
+</div>
+</body>
+</html>

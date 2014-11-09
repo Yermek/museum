@@ -1,0 +1,74 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>Buisiness project: internet shop</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-5">
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <!--[if IE]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+<div id="header">
+    <a href="/" class="float"><img src="/images/logo.jpg" alt="" width="171" height="73" /></a>
+    <div class="topblock2">
+        </a><img src="/images/shopping.gif" alt="" width="24" height="24" class="shopping" />
+        <a href="/cartpage""><p>Shopping cart</p></a>
+    </div>
+    <ul id="menu">
+        <li><img src="/images/li.gif" alt="" width="19" height="29" /></li>
+        <li><a href="/"><img src="/images/but1_a.gif" alt="" width="90" height="29" /></a></li>
+        <li><a href="/"><img src="/images/but5.gif" alt="" width="132" height="29" /></a></li>
+        <li><a href="/"><img src="/images/but7.gif" alt="" width="82" height="29" /></a></li>
+        <li><a href="/"><img src="/images/but8.gif" alt="" width="112" height="29" /></a></li>
+		<li><audio controls>
+                <source src="God Is An astronaut - Shadows.mp3">
+                <source src="Antonio Vivaldi - Palladio.mp3">
+                <source src="Ludwig van Beethoven - Fur Elise.mp3">
+                <source src="Vivaldi - Winter.mp3">
+                <source src="Vagner - Hell and Paradise.mp3">
+                <source src="Ludwig van Beethoven - Piano Sonata No14 in C-sharp Minor (Moonlight).mp3">
+                <source src="E.S. Posthumus - Moonlight sonata.mp3">
+            </audio></li>
+    </ul>
+</div>
+
+<div id="container">
+    <div id="center" class="column">
+        <div id="content">
+            <H1>$message</H1>
+        </div>
+    </div>
+    <div id="left" class="column">
+        <div class="block">
+            <img src="/images/title1.gif" alt="" width="168" height="42" /><br />
+            <ul id="navigation">
+                #foreach($group in $groups)
+                    <li class="color"><a href="/itemslist?idgroup=$group.id">$group.nameGroupItem</a></li>
+                #end
+            </ul>
+        </div>
+    </div>
+    <div id="right" class="column">
+        <div class="rightblock">
+            <img src="/images/title4.gif" alt="" width="223" height="29" /><br />
+            <div class="blocks">
+                <img src="/images/top_bg.gif" alt="" width="218" height="12" />
+                <form action="#">
+                    <p class="line"><span>Login:</span> <input type="text" /></p>
+                    <p class="line"><span>Password:</span> <input type="text" /></p>
+                    <p class="line center"><a href="#" class="reg">Registration</a></p>
+                    <p class="line center pad20"><a href="#"><img src="/images/enter.gif" alt="" width="69" height="25" /></a></p>
+                </form>
+                <img src="/images/bot_bg.gif" alt="" width="218" height="10" /><br />
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="footer">
+    <p>Copyright &copy;. All rights reserved.</p>
+</div>
+</body>
+</html>

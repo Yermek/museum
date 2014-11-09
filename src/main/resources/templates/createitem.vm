@@ -1,0 +1,62 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<title>Buisiness project: internet shop</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-5">
+	<link rel="stylesheet" type="text/css" href="/style.css" />
+	<!--[if IE]>
+		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+</head>
+
+<body>
+<audio src="God Is An astronaut - Shadows.mp3" autoplay loop controls></audio>
+	<div id="header">
+		<a href="index.html" class="float"><img src="/images/logo.jpg" alt="" width="171" height="73" /></a>
+		<div class="topblock2">
+			<img src="/images/shopping.gif" alt="" width="24" height="24" class="shopping" />
+            <a href="/cartpage""><p>Shopping cart</p></a>
+		</div>
+		<ul id="menu">
+			<li><img src="/images/li.gif" alt="" width="19" height="29" /></li>
+			<li><a href="index.html"><img src="/images/but1_a.gif" alt="" width="90" height="29" /></a></li>
+			<li><a href="index2.html"><img src="/images/but5.gif" alt="" width="132" height="29" /></a></li>
+			<li><a href="index2.html"><img src="/images/but7.gif" alt="" width="82" height="29" /></a></li>
+			<li><a href="index2.html"><img src="/images/but8.gif" alt="" width="112" height="29" /></a></li>
+		</ul>
+	</div>
+
+	<div id="container">
+	  <div id="center" class="column">
+	  	<div id="content">
+			<img src="/images/title6.gif" alt="" width="537" height="23" class="pad25" />
+			<div class="stuff">
+                <form action="/additem" method="get">
+                    <p class="line"><span>Name of item:</span> <input type="text" name="nameitem"/></p>
+                    <p class="line"><span>Model of item (x3d):</span> <input type="text" name="modelitem"/></p>
+                    <p class="line"><span>Photo of item:</span> <input type="text" name="photoitem"/></p>
+                    <p class="line"><span>Characteristic of item:</span> <input type="text" name="characteritem"/></p>
+                    <p class="line"><span>Price of item:</span> <input type="text" name="priceitem"/></p>
+                    <p class="line"><span>Group of item:</span> <input type="text" name="groupitem"/></p>
+                    <p><input type="submit" name="Save" label="Save"></p>
+                </form>
+			</div>
+		</div>
+	  </div>
+        <div id="left" class="column">
+            <div class="block">
+                <img src="/images/title1.gif" alt="" width="168" height="42" /><br />
+                <ul id="navigation">
+                    #foreach($group in $groups)
+                        <li class="color"><a href="/itemslist?idgroup=$group.idGroupItem">$group.nameGroupItem</a></li>
+                    #end
+                </ul>
+            </div>
+        </div>
+	</div>
+
+	<div id="footer">
+		<p>Copyright &copy;. All rights reserved.</p>
+	</div>
+</body>
+</html>
