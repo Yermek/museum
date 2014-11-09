@@ -14,9 +14,16 @@ apply plugin: 'java'
 apply plugin: 'eclipse'
 apply plugin: 'idea'
 apply plugin: 'spring-boot'
+apply plugin: 'war'
+apply plugin: 'jetty'
+
+war{
+ archiveName = 'ROOT.war'
+ destinationDir = file('webapps')
+}
 
 jar {
-    baseName = 'businessproj'
+    baseName = 'ROOT'
     version =  '1.0.0'
 }
 
@@ -40,3 +47,6 @@ dependencies {
 
     testCompile group: 'junit', name: 'junit', version: '4.11'
 }
+
+/* Change context path (base url). otherwise defaults to name of project */
+jettyRunWar.contextPath = ''
